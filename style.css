@@ -31,7 +31,6 @@ h1 {
   font-weight: 700;
   line-height: 1.25;
   margin-bottom: 2.5rem;
-  max-width: 25rem;
 }
 
 p {
@@ -57,19 +56,17 @@ p {
 
 .heroSection {
   display: flex;
-  /* flex-wrap: nowrap;
-  flex-direction: row; */
-  flex-flow: row no-wrap;
   align-items: center;
+  flex-direction: row;
   padding-bottom: 1.5rem;
 }
 
 .heroSectionImage {
-  flex-basis: 43.75rem;
+  /* flex-basis: 43.75rem; */
 }
 
 .heroSectionTextblock {
-  flex-basis: 36.25rem;
+  /* flex-basis: 36.25rem; */
   padding-left: 3.75rem;
 }
 
@@ -100,4 +97,40 @@ button:hover {
 .instagram,
 .twitter {
   padding-left: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .heroSection {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .heroSectionImage {
+    max-width: 500px;
+  }
+  .heroSectionTextblock {
+    text-align: center;
+    padding: 0;
+  }
+  .heroSectionHeading {
+    max-width: 40rem;
+    padding-left: 0;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .heroSection {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .heroSectionImage {
+    max-width: 300px;
+  }
+  .heroSectionTextblock {
+    text-align: center;
+    padding: 0;
+  }
+  .heroSectionHeading {
+    max-width: 30rem;
+    padding-left: 0;
+  }
 }
